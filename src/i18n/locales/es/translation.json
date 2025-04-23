@@ -1,0 +1,176 @@
+{
+  "app": {
+    "name": "Asistente W3J",
+    "tagline": "Tu compañero de IA premium"
+  },
+  "auth": {
+    "signIn": "Iniciar Sesión",
+    "signUp": "Registrarse",
+    "signOut": "Cerrar Sesión",
+    "email": "Correo electrónico",
+    "password": "Contraseña",
+    "confirmPassword": "Confirmar Contraseña",
+    "forgotPassword": "¿Olvidaste tu contraseña?",
+    "resetPassword": "Restablecer Contraseña",
+    "createAccount": "Crear Cuenta",
+    "alreadyHaveAccount": "¿Ya tienes una cuenta?",
+    "dontHaveAccount": "¿No tienes una cuenta?",
+    "fullName": "Nombre Completo",
+    "passwordRequirements": "La contraseña debe tener al menos 8 caracteres",
+    "sendResetInstructions": "Enviar Instrucciones de Restablecimiento",
+    "rememberPassword": "¿Recuerdas tu contraseña?",
+    "backToSignIn": "Volver a Iniciar Sesión",
+    "registrationSuccess": "¡Registro exitoso! Por favor, revisa tu correo electrónico para confirmar tu cuenta."
+  },
+  "chat": {
+    "newChat": "Nuevo Chat",
+    "send": "Enviar",
+    "typeMessage": "Escribe un mensaje...",
+    "attachFile": "Adjuntar archivo",
+    "startVoice": "Iniciar entrada de voz",
+    "stopVoice": "Detener grabación",
+    "you": "Tú",
+    "assistant": "Asistente W3J",
+    "welcome": {
+      "title": "Bienvenido al Asistente W3J",
+      "subtitle": "Pregúntame cualquier cosa sobre el menú, obtén recomendaciones o ayuda con cualquier otra pregunta."
+    },
+    "suggestions": {
+      "menu": "¿Qué hay en el menú hoy?",
+      "vegetarian": "Recomienda algo vegetariano",
+      "specials": "Cuéntame sobre tus especialidades",
+      "hours": "¿Cuáles son tus horarios de apertura?"
+    },
+    "history": "Historial de Chat",
+    "noHistory": "Aún no hay historial de chat",
+    "startNewChat": "Iniciar un nuevo chat",
+    "deleteChat": "Eliminar chat",
+    "editTitle": "Editar título",
+    "saveTitle": "Guardar"
+  },
+  "settings": {
+    "title": "Configuración",
+    "apiSettings": "Configuración de API",
+    "provider": "Proveedor de IA",
+    "model": "Modelo",
+    "systemPrompt": "Prompt del Sistema",
+    "apiKey": "Clave API",
+    "elevenlabsKey": "Clave API de ElevenLabs",
+    "braveApiKey": "Clave API de Brave Search",
+    "mcpServerUrl": "URL del Servidor MCP",
+    "advancedSettings": "Configuración Avanzada",
+    "showAdvanced": "Mostrar Configuración Avanzada",
+    "hideAdvanced": "Ocultar Configuración Avanzada",
+    "webSearch": "Búsqueda Web",
+    "enableWebSearch": "Habilitar búsqueda web",
+    "useMcpServer": "Usar Servidor MCP",
+    "saveSettings": "Guardar Configuración"
+  },
+  "profile": {
+    "title": "Configuración de Perfil",
+    "emailCannotChange": "El correo electrónico no se puede cambiar",
+    "saveChanges": "Guardar Cambios"
+  },
+  "preferences": {
+    "title": "Preferencias de Usuario",
+    "theme": "Tema",
+    "themes": {
+      "dark": "Oscuro",
+      "light": "Claro",
+      "system": "Sistema"
+    },
+    "defaultProvider": "Proveedor de IA Predeterminado",
+    "defaultModel": "Modelo Predeterminado",
+    "defaultSystemPrompt": "Prompt del Sistema Predeterminado",
+    "enableVoice": "Habilitar entrada/salida de voz",
+    "enableWebSearch": "Habilitar búsqueda web",
+    "savePreferences": "Guardar Preferencias"
+  },
+  "apiKeys": {
+    "title": "Claves API",
+    "securityNote": "Tus claves API están encriptadas y almacenadas de forma segura. Nunca compartimos tus claves con terceros.",
+    "showKey": "Mostrar Clave API",
+    "hideKey": "Ocultar Clave API",
+    "deleteKey": "Eliminar Clave API",
+    "save": "Guardar"
+  },
+  "accessibility": {
+    "title": "Configuración de Accesibilidad",
+    "highContrast": "Alto Contraste",
+    "highContrastDesc": "Aumentar el contraste para mejor visibilidad",
+    "largeText": "Texto Grande",
+    "largeTextDesc": "Aumentar el tamaño del texto para mejor legibilidad",
+    "reducedMotion": "Movimiento Reducido",
+    "reducedMotionDesc": "Minimizar animaciones y transiciones",
+    "screenReaderMode": "Modo Lector de Pantalla",
+    "screenReaderModeDesc": "Optimizar para lectores de pantalla",
+    "resetToDefaults": "Restablecer a Valores Predeterminados",
+    "keyboardShortcuts": "Atajos de Teclado",
+    "toggleHighContrast": "Alternar alto contraste",
+    "toggleLargeText": "Alternar texto grande",
+    "toggleReducedMotion": "Alternar movimiento reducido",
+    "toggleScreenReaderMode": "Alternar modo lector de pantalla",
+    "skipToContent": "Saltar al contenido principal"
+  },
+  "analytics": {
+    "title": "Panel de Análisis",
+    "timeRanges": {
+      "7days": "7 Días",
+      "30days": "30 Días",
+      "90days": "90 Días"
+    },
+    "export": "Exportar",
+    "stats": {
+      "totalUsers": "Total de Usuarios",
+      "totalSessions": "Total de Sesiones",
+      "totalMessages": "Total de Mensajes"
+    },
+    "charts": {
+      "messagesByDay": "Mensajes por Día",
+      "messagesByRole": "Mensajes por Rol",
+      "featureUsage": "Uso de Funciones",
+      "userRetention": "Retención de Usuarios"
+    }
+  },
+  "menu": {
+    "categories": "Categorías",
+    "items": "Elementos",
+    "price": "Precio",
+    "description": "Descripción",
+    "ingredients": "Ingredientes",
+    "dietaryInfo": "Información Dietética",
+    "popular": "Popular",
+    "available": "Disponible",
+    "unavailable": "No Disponible",
+    "recommendations": "Recomendaciones",
+    "pairings": "Maridajes Recomendados"
+  },
+  "errors": {
+    "general": "Ocurrió un error. Por favor, inténtalo de nuevo.",
+    "login": "Credenciales de inicio de sesión inválidas",
+    "registration": "Falló el registro",
+    "passwordMismatch": "Las contraseñas no coinciden",
+    "apiKey": "Clave API inválida",
+    "connection": "Error de conexión. Por favor, verifica tu conexión a internet.",
+    "permission": "No tienes permiso para ver este contenido"
+  },
+  "common": {
+    "loading": "Cargando...",
+    "saving": "Guardando...",
+    "delete": "Eliminar",
+    "edit": "Editar",
+    "cancel": "Cancelar",
+    "confirm": "Confirmar",
+    "yes": "Sí",
+    "no": "No",
+    "success": "Éxito",
+    "error": "Error",
+    "warning": "Advertencia",
+    "info": "Información",
+    "close": "Cerrar",
+    "back": "Atrás",
+    "next": "Siguiente",
+    "retry": "Reintentar",
+    "tryAgain": "Intentar de Nuevo"
+  }
+}

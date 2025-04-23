@@ -1,0 +1,134 @@
+/* ComparisonTable.css */
+.comparison-table-container {
+  background: #fff;
+  border-radius: 12px;
+  box-shadow: 0 8px 20px rgba(0, 0, 0, 0.08);
+  padding: 1.5rem;
+  margin: 1rem 0;
+}
+
+.comparison-table-title {
+  margin: 0 0 1rem;
+  font-size: 1.5rem;
+  font-weight: 600;
+  color: #2d3748;
+}
+
+.comparison-table-wrapper {
+  overflow-x: auto;
+  margin-bottom: 1rem;
+}
+
+.comparison-table {
+  width: 100%;
+  border-collapse: collapse;
+  text-align: left;
+}
+
+.comparison-table th,
+.comparison-table td {
+  padding: 0.75rem 1rem;
+  border-bottom: 1px solid #e2e8f0;
+}
+
+.comparison-table th {
+  background-color: #f7fafc;
+  font-weight: 600;
+  color: #4a5568;
+}
+
+.comparison-table th:first-child,
+.comparison-table td:first-child {
+  font-weight: 600;
+  color: #2d3748;
+}
+
+.comparison-table th.highlighted,
+.comparison-table td.highlighted {
+  background-color: #ebf8ff;
+}
+
+.comparison-table tr:last-child td {
+  border-bottom: none;
+}
+
+.comparison-table tr:hover td {
+  background-color: #f7fafc;
+}
+
+.comparison-table-footer {
+  font-size: 0.9rem;
+  color: #718096;
+  margin-top: 1rem;
+  padding-top: 0.5rem;
+  border-top: 1px solid #e2e8f0;
+}
+
+.comparison-table-actions {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 1rem;
+  margin-top: 1.5rem;
+}
+
+.column-actions {
+  display: flex;
+  flex-direction: column;
+  gap: 0.5rem;
+}
+
+.column-name {
+  font-weight: 600;
+  color: #4a5568;
+  font-size: 0.9rem;
+}
+
+.column-buttons {
+  display: flex;
+  flex-direction: column;
+  gap: 0.5rem;
+}
+
+.comparison-action-button {
+  padding: 0.5rem 1rem;
+  border-radius: 6px;
+  font-weight: 500;
+  cursor: pointer;
+  transition: all 0.2s ease;
+  border: none;
+  white-space: nowrap;
+}
+
+.comparison-action-button.primary {
+  background: #4299e1;
+  color: white;
+}
+
+.comparison-action-button.primary:hover {
+  background: #3182ce;
+}
+
+.comparison-action-button.secondary {
+  background: #e2e8f0;
+  color: #4a5568;
+}
+
+.comparison-action-button.secondary:hover {
+  background: #cbd5e0;
+}
+
+/* Responsive adjustments */
+@media (max-width: 640px) {
+  .comparison-table-actions {
+    flex-direction: column;
+  }
+  
+  .column-actions {
+    width: 100%;
+  }
+  
+  .column-buttons {
+    flex-direction: row;
+    flex-wrap: wrap;
+  }
+}

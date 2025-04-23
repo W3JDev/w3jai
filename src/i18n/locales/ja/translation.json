@@ -1,0 +1,176 @@
+{
+  "app": {
+    "name": "W3J アシスタント",
+    "tagline": "あなたのプレミアムAIコンパニオン"
+  },
+  "auth": {
+    "signIn": "サインイン",
+    "signUp": "サインアップ",
+    "signOut": "サインアウト",
+    "email": "メールアドレス",
+    "password": "パスワード",
+    "confirmPassword": "パスワードの確認",
+    "forgotPassword": "パスワードをお忘れですか？",
+    "resetPassword": "パスワードをリセット",
+    "createAccount": "アカウント作成",
+    "alreadyHaveAccount": "すでにアカウントをお持ちですか？",
+    "dontHaveAccount": "アカウントをお持ちでないですか？",
+    "fullName": "氏名",
+    "passwordRequirements": "パスワードは8文字以上である必要があります",
+    "sendResetInstructions": "リセット手順を送信",
+    "rememberPassword": "パスワードを覚えていますか？",
+    "backToSignIn": "サインインに戻る",
+    "registrationSuccess": "登録が成功しました！アカウントを確認するためにメールをご確認ください。"
+  },
+  "chat": {
+    "newChat": "新しいチャット",
+    "send": "送信",
+    "typeMessage": "メッセージを入力...",
+    "attachFile": "ファイルを添付",
+    "startVoice": "音声入力を開始",
+    "stopVoice": "録音を停止",
+    "you": "あなた",
+    "assistant": "W3J アシスタント",
+    "welcome": {
+      "title": "W3J アシスタントへようこそ",
+      "subtitle": "メニューについて質問したり、おすすめを聞いたり、その他の質問についてもお手伝いします。"
+    },
+    "suggestions": {
+      "menu": "今日のメニューは何ですか？",
+      "vegetarian": "ベジタリアン向けのおすすめは？",
+      "specials": "特別メニューについて教えてください",
+      "hours": "営業時間を教えてください"
+    },
+    "history": "チャット履歴",
+    "noHistory": "チャット履歴はまだありません",
+    "startNewChat": "新しいチャットを開始",
+    "deleteChat": "チャットを削除",
+    "editTitle": "タイトルを編集",
+    "saveTitle": "保存"
+  },
+  "settings": {
+    "title": "設定",
+    "apiSettings": "API設定",
+    "provider": "AIプロバイダー",
+    "model": "モデル",
+    "systemPrompt": "システムプロンプト",
+    "apiKey": "APIキー",
+    "elevenlabsKey": "ElevenLabs APIキー",
+    "braveApiKey": "Brave検索APIキー",
+    "mcpServerUrl": "MCPサーバーURL",
+    "advancedSettings": "詳細設定",
+    "showAdvanced": "詳細設定を表示",
+    "hideAdvanced": "詳細設定を非表示",
+    "webSearch": "ウェブ検索",
+    "enableWebSearch": "ウェブ検索を有効にする",
+    "useMcpServer": "MCPサーバーを使用",
+    "saveSettings": "設定を保存"
+  },
+  "profile": {
+    "title": "プロフィール設定",
+    "emailCannotChange": "メールアドレスは変更できません",
+    "saveChanges": "変更を保存"
+  },
+  "preferences": {
+    "title": "ユーザー設定",
+    "theme": "テーマ",
+    "themes": {
+      "dark": "ダーク",
+      "light": "ライト",
+      "system": "システム"
+    },
+    "defaultProvider": "デフォルトAIプロバイダー",
+    "defaultModel": "デフォルトモデル",
+    "defaultSystemPrompt": "デフォルトシステムプロンプト",
+    "enableVoice": "音声入出力を有効にする",
+    "enableWebSearch": "ウェブ検索を有効にする",
+    "savePreferences": "設定を保存"
+  },
+  "apiKeys": {
+    "title": "APIキー",
+    "securityNote": "APIキーは暗号化され安全に保存されます。第三者とキーを共有することはありません。",
+    "showKey": "APIキーを表示",
+    "hideKey": "APIキーを非表示",
+    "deleteKey": "APIキーを削除",
+    "save": "保存"
+  },
+  "accessibility": {
+    "title": "アクセシビリティ設定",
+    "highContrast": "ハイコントラスト",
+    "highContrastDesc": "視認性向上のためにコントラストを上げる",
+    "largeText": "大きいテキスト",
+    "largeTextDesc": "読みやすさ向上のためにテキストサイズを大きくする",
+    "reducedMotion": "モーション軽減",
+    "reducedMotionDesc": "アニメーションとトランジションを最小限に",
+    "screenReaderMode": "スクリーンリーダーモード",
+    "screenReaderModeDesc": "スクリーンリーダー向けに最適化",
+    "resetToDefaults": "デフォルトにリセット",
+    "keyboardShortcuts": "キーボードショートカット",
+    "toggleHighContrast": "ハイコントラスト切り替え",
+    "toggleLargeText": "大きいテキスト切り替え",
+    "toggleReducedMotion": "モーション軽減切り替え",
+    "toggleScreenReaderMode": "スクリーンリーダーモード切り替え",
+    "skipToContent": "メインコンテンツにスキップ"
+  },
+  "analytics": {
+    "title": "分析ダッシュボード",
+    "timeRanges": {
+      "7days": "7日間",
+      "30days": "30日間",
+      "90days": "90日間"
+    },
+    "export": "エクスポート",
+    "stats": {
+      "totalUsers": "総ユーザー数",
+      "totalSessions": "総セッション数",
+      "totalMessages": "総メッセージ数"
+    },
+    "charts": {
+      "messagesByDay": "日別メッセージ",
+      "messagesByRole": "役割別メッセージ",
+      "featureUsage": "機能使用状況",
+      "userRetention": "ユーザー維持率"
+    }
+  },
+  "menu": {
+    "categories": "カテゴリー",
+    "items": "アイテム",
+    "price": "価格",
+    "description": "説明",
+    "ingredients": "材料",
+    "dietaryInfo": "食事情報",
+    "popular": "人気",
+    "available": "利用可能",
+    "unavailable": "利用不可",
+    "recommendations": "おすすめ",
+    "pairings": "おすすめの組み合わせ"
+  },
+  "errors": {
+    "general": "エラーが発生しました。もう一度お試しください。",
+    "login": "ログイン情報が無効です",
+    "registration": "登録に失敗しました",
+    "passwordMismatch": "パスワードが一致しません",
+    "apiKey": "無効なAPIキー",
+    "connection": "接続エラー。インターネット接続を確認してください。",
+    "permission": "このコンテンツを表示する権限がありません"
+  },
+  "common": {
+    "loading": "読み込み中...",
+    "saving": "保存中...",
+    "delete": "削除",
+    "edit": "編集",
+    "cancel": "キャンセル",
+    "confirm": "確認",
+    "yes": "はい",
+    "no": "いいえ",
+    "success": "成功",
+    "error": "エラー",
+    "warning": "警告",
+    "info": "情報",
+    "close": "閉じる",
+    "back": "戻る",
+    "next": "次へ",
+    "retry": "再試行",
+    "tryAgain": "もう一度試す"
+  }
+}

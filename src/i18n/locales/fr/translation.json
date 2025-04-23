@@ -1,0 +1,176 @@
+{
+  "app": {
+    "name": "Assistant W3J",
+    "tagline": "Votre compagnon IA premium"
+  },
+  "auth": {
+    "signIn": "Se Connecter",
+    "signUp": "S'inscrire",
+    "signOut": "Se Déconnecter",
+    "email": "Email",
+    "password": "Mot de passe",
+    "confirmPassword": "Confirmer le mot de passe",
+    "forgotPassword": "Mot de passe oublié?",
+    "resetPassword": "Réinitialiser le mot de passe",
+    "createAccount": "Créer un compte",
+    "alreadyHaveAccount": "Vous avez déjà un compte?",
+    "dontHaveAccount": "Vous n'avez pas de compte?",
+    "fullName": "Nom complet",
+    "passwordRequirements": "Le mot de passe doit comporter au moins 8 caractères",
+    "sendResetInstructions": "Envoyer les instructions de réinitialisation",
+    "rememberPassword": "Vous vous souvenez de votre mot de passe?",
+    "backToSignIn": "Retour à la connexion",
+    "registrationSuccess": "Inscription réussie! Veuillez vérifier votre email pour confirmer votre compte."
+  },
+  "chat": {
+    "newChat": "Nouvelle Conversation",
+    "send": "Envoyer",
+    "typeMessage": "Tapez un message...",
+    "attachFile": "Joindre un fichier",
+    "startVoice": "Démarrer l'entrée vocale",
+    "stopVoice": "Arrêter l'enregistrement",
+    "you": "Vous",
+    "assistant": "Assistant W3J",
+    "welcome": {
+      "title": "Bienvenue sur l'Assistant W3J",
+      "subtitle": "Posez-moi n'importe quelle question sur le menu, obtenez des recommandations ou de l'aide pour toute autre question."
+    },
+    "suggestions": {
+      "menu": "Qu'y a-t-il au menu aujourd'hui?",
+      "vegetarian": "Recommandez quelque chose de végétarien",
+      "specials": "Parlez-moi de vos spécialités",
+      "hours": "Quelles sont vos heures d'ouverture?"
+    },
+    "history": "Historique des conversations",
+    "noHistory": "Pas encore d'historique de conversation",
+    "startNewChat": "Démarrer une nouvelle conversation",
+    "deleteChat": "Supprimer la conversation",
+    "editTitle": "Modifier le titre",
+    "saveTitle": "Enregistrer"
+  },
+  "settings": {
+    "title": "Paramètres",
+    "apiSettings": "Paramètres API",
+    "provider": "Fournisseur IA",
+    "model": "Modèle",
+    "systemPrompt": "Prompt Système",
+    "apiKey": "Clé API",
+    "elevenlabsKey": "Clé API ElevenLabs",
+    "braveApiKey": "Clé API Brave Search",
+    "mcpServerUrl": "URL du serveur MCP",
+    "advancedSettings": "Paramètres avancés",
+    "showAdvanced": "Afficher les paramètres avancés",
+    "hideAdvanced": "Masquer les paramètres avancés",
+    "webSearch": "Recherche Web",
+    "enableWebSearch": "Activer la recherche web",
+    "useMcpServer": "Utiliser le serveur MCP",
+    "saveSettings": "Enregistrer les paramètres"
+  },
+  "profile": {
+    "title": "Paramètres du profil",
+    "emailCannotChange": "L'email ne peut pas être modifié",
+    "saveChanges": "Enregistrer les modifications"
+  },
+  "preferences": {
+    "title": "Préférences utilisateur",
+    "theme": "Thème",
+    "themes": {
+      "dark": "Sombre",
+      "light": "Clair",
+      "system": "Système"
+    },
+    "defaultProvider": "Fournisseur IA par défaut",
+    "defaultModel": "Modèle par défaut",
+    "defaultSystemPrompt": "Prompt système par défaut",
+    "enableVoice": "Activer l'entrée/sortie vocale",
+    "enableWebSearch": "Activer la recherche web",
+    "savePreferences": "Enregistrer les préférences"
+  },
+  "apiKeys": {
+    "title": "Clés API",
+    "securityNote": "Vos clés API sont cryptées et stockées en toute sécurité. Nous ne partageons jamais vos clés avec des tiers.",
+    "showKey": "Afficher la clé API",
+    "hideKey": "Masquer la clé API",
+    "deleteKey": "Supprimer la clé API",
+    "save": "Enregistrer"
+  },
+  "accessibility": {
+    "title": "Paramètres d'accessibilité",
+    "highContrast": "Contraste élevé",
+    "highContrastDesc": "Augmenter le contraste pour une meilleure visibilité",
+    "largeText": "Texte large",
+    "largeTextDesc": "Augmenter la taille du texte pour une meilleure lisibilité",
+    "reducedMotion": "Mouvement réduit",
+    "reducedMotionDesc": "Minimiser les animations et transitions",
+    "screenReaderMode": "Mode lecteur d'écran",
+    "screenReaderModeDesc": "Optimiser pour les lecteurs d'écran",
+    "resetToDefaults": "Réinitialiser aux valeurs par défaut",
+    "keyboardShortcuts": "Raccourcis clavier",
+    "toggleHighContrast": "Activer/désactiver le contraste élevé",
+    "toggleLargeText": "Activer/désactiver le texte large",
+    "toggleReducedMotion": "Activer/désactiver le mouvement réduit",
+    "toggleScreenReaderMode": "Activer/désactiver le mode lecteur d'écran",
+    "skipToContent": "Passer au contenu principal"
+  },
+  "analytics": {
+    "title": "Tableau de bord d'analyse",
+    "timeRanges": {
+      "7days": "7 Jours",
+      "30days": "30 Jours",
+      "90days": "90 Jours"
+    },
+    "export": "Exporter",
+    "stats": {
+      "totalUsers": "Total des utilisateurs",
+      "totalSessions": "Total des sessions",
+      "totalMessages": "Total des messages"
+    },
+    "charts": {
+      "messagesByDay": "Messages par jour",
+      "messagesByRole": "Messages par rôle",
+      "featureUsage": "Utilisation des fonctionnalités",
+      "userRetention": "Rétention des utilisateurs"
+    }
+  },
+  "menu": {
+    "categories": "Catégories",
+    "items": "Articles",
+    "price": "Prix",
+    "description": "Description",
+    "ingredients": "Ingrédients",
+    "dietaryInfo": "Informations diététiques",
+    "popular": "Populaire",
+    "available": "Disponible",
+    "unavailable": "Indisponible",
+    "recommendations": "Recommandations",
+    "pairings": "Accords recommandés"
+  },
+  "errors": {
+    "general": "Une erreur s'est produite. Veuillez réessayer.",
+    "login": "Identifiants de connexion invalides",
+    "registration": "L'inscription a échoué",
+    "passwordMismatch": "Les mots de passe ne correspondent pas",
+    "apiKey": "Clé API invalide",
+    "connection": "Erreur de connexion. Veuillez vérifier votre connexion internet.",
+    "permission": "Vous n'avez pas la permission de voir ce contenu"
+  },
+  "common": {
+    "loading": "Chargement...",
+    "saving": "Enregistrement...",
+    "delete": "Supprimer",
+    "edit": "Modifier",
+    "cancel": "Annuler",
+    "confirm": "Confirmer",
+    "yes": "Oui",
+    "no": "Non",
+    "success": "Succès",
+    "error": "Erreur",
+    "warning": "Avertissement",
+    "info": "Information",
+    "close": "Fermer",
+    "back": "Retour",
+    "next": "Suivant",
+    "retry": "Réessayer",
+    "tryAgain": "Essayer à nouveau"
+  }
+}

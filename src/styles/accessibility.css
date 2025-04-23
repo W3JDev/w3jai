@@ -1,0 +1,179 @@
+/* Accessibility Styles */
+
+/* High Contrast Mode */
+.high-contrast {
+  --bg-primary: #000000;
+  --bg-secondary: #121212;
+  --text-primary: #ffffff;
+  --text-secondary: #f0f0f0;
+  --border-color: #ffffff;
+  --accent-color: #ffff00;
+  --focus-color: #ffff00;
+  --error-color: #ff0000;
+  --success-color: #00ff00;
+}
+
+.high-contrast body {
+  background-color: var(--bg-primary);
+  color: var(--text-primary);
+}
+
+.high-contrast button,
+.high-contrast input,
+.high-contrast textarea,
+.high-contrast select {
+  border: 2px solid var(--border-color);
+}
+
+.high-contrast a,
+.high-contrast button {
+  color: var(--accent-color);
+}
+
+.high-contrast *:focus {
+  outline: 3px solid var(--focus-color);
+  outline-offset: 2px;
+}
+
+.high-contrast .bg-gray-800,
+.high-contrast .bg-gray-700,
+.high-contrast .bg-gray-900 {
+  background-color: var(--bg-secondary);
+}
+
+.high-contrast .text-gray-300,
+.high-contrast .text-gray-400 {
+  color: var(--text-secondary);
+}
+
+/* Large Text Mode */
+.large-text {
+  font-size: 1.25rem;
+  line-height: 1.5;
+}
+
+.large-text h1 {
+  font-size: 2.5rem;
+}
+
+.large-text h2 {
+  font-size: 2rem;
+}
+
+.large-text h3 {
+  font-size: 1.75rem;
+}
+
+.large-text button,
+.large-text input,
+.large-text textarea,
+.large-text select {
+  font-size: 1.25rem;
+  padding: 0.75rem;
+}
+
+.large-text .text-sm {
+  font-size: 1.1rem;
+}
+
+.large-text .text-xs {
+  font-size: 1rem;
+}
+
+/* Reduced Motion Mode */
+.reduced-motion * {
+  animation-duration: 0.001ms !important;
+  animation-iteration-count: 1 !important;
+  transition-duration: 0.001ms !important;
+  scroll-behavior: auto !important;
+}
+
+.reduced-motion .animate-pulse,
+.reduced-motion .animate-spin,
+.reduced-motion .animate-bounce,
+.reduced-motion .animate-ping {
+  animation: none !important;
+}
+
+.reduced-motion .hover\:scale-\[1\.02\]:hover,
+.reduced-motion .hover\:translate-y-\[-1px\]:hover,
+.reduced-motion .transform {
+  transform: none !important;
+}
+
+/* Screen Reader Mode */
+.screen-reader-mode .sr-only {
+  position: static !important;
+  width: auto !important;
+  height: auto !important;
+  padding: 0.5rem !important;
+  margin: 0.5rem 0 !important;
+  overflow: visible !important;
+  clip: auto !important;
+  white-space: normal !important;
+  border: 1px solid #666 !important;
+  background-color: #333 !important;
+  color: #fff !important;
+  display: block !important;
+}
+
+/* Focus Styles */
+*:focus {
+  outline: 2px solid #3b82f6;
+  outline-offset: 2px;
+}
+
+/* Skip Link */
+.skip-link {
+  position: absolute;
+  top: -40px;
+  left: 0;
+  background: #3b82f6;
+  color: white;
+  padding: 8px;
+  z-index: 100;
+  transition: top 0.3s;
+}
+
+.skip-link:focus {
+  top: 0;
+}
+
+/* Keyboard Focus Indicator */
+.keyboard-focus-indicator {
+  position: fixed;
+  pointer-events: none;
+  z-index: 9999;
+  border: 2px solid #3b82f6;
+  border-radius: 4px;
+  transition: all 0.2s ease;
+  box-shadow: 0 0 0 2px rgba(59, 130, 246, 0.5);
+  display: none;
+}
+
+body.keyboard-navigation .keyboard-focus-indicator {
+  display: block;
+}
+
+/* Utility Classes */
+.visually-hidden {
+  position: absolute !important;
+  width: 1px !important;
+  height: 1px !important;
+  padding: 0 !important;
+  margin: -1px !important;
+  overflow: hidden !important;
+  clip: rect(0, 0, 0, 0) !important;
+  white-space: nowrap !important;
+  border: 0 !important;
+}
+
+.visually-hidden:not(:focus):not(:active) {
+  clip: rect(0 0 0 0) !important;
+  clip-path: inset(50%) !important;
+  height: 1px !important;
+  width: 1px !important;
+  overflow: hidden !important;
+  position: absolute !important;
+  white-space: nowrap !important;
+}

@@ -1,0 +1,38 @@
+
+> react-ai-chat@0.0.0 build
+> vite build
+
+[36mvite v5.4.14 [32mbuilding for production...[36m[39m
+transforming...
+[32m✓[39m 2452 modules transformed.
+rendering chunks...
+computing gzip size...
+[2mdist/[22m[32mindex.html                                    [39m[1m[2m  1.87 kB[22m[1m[22m[2m │ gzip:   0.79 kB[22m
+[2mdist/[22m[35massets/StructuredOutputRenderer-Cc7f0R9R.css  [39m[1m[2m 29.77 kB[22m[1m[22m[2m │ gzip:   4.79 kB[22m
+[2mdist/[22m[35massets/index-yehdLr4M.css                     [39m[1m[2m 50.45 kB[22m[1m[22m[2m │ gzip:   9.82 kB[22m
+[2mdist/[22m[36massets/browser-BOM4FQXt.js                    [39m[1m[2m  0.30 kB[22m[1m[22m[2m │ gzip:   0.25 kB[22m
+[2mdist/[22m[36massets/message-square-BfOxtkhI.js             [39m[1m[2m  0.36 kB[22m[1m[22m[2m │ gzip:   0.27 kB[22m
+[2mdist/[22m[36massets/user-Bt4w5cfF.js                       [39m[1m[2m  0.38 kB[22m[1m[22m[2m │ gzip:   0.29 kB[22m
+[2mdist/[22m[36massets/download-B1CgMwuF.js                   [39m[1m[2m  0.44 kB[22m[1m[22m[2m │ gzip:   0.33 kB[22m
+[2mdist/[22m[36massets/save-CJLpmJGg.js                       [39m[1m[2m  0.46 kB[22m[1m[22m[2m │ gzip:   0.32 kB[22m
+[2mdist/[22m[36massets/trash-2-DDEzAcsw.js                    [39m[1m[2m  0.54 kB[22m[1m[22m[2m │ gzip:   0.35 kB[22m
+[2mdist/[22m[36massets/eye-DnXtOHoN.js                        [39m[1m[2m  0.90 kB[22m[1m[22m[2m │ gzip:   0.45 kB[22m
+[2mdist/[22m[36massets/settings-mx-0Ppi6.js                   [39m[1m[2m  0.91 kB[22m[1m[22m[2m │ gzip:   0.45 kB[22m
+[2mdist/[22m[36massets/createLucideIcon-DDGcAbar.js           [39m[1m[2m  1.04 kB[22m[1m[22m[2m │ gzip:   0.57 kB[22m
+[2mdist/[22m[36massets/useTranslation-CqIn5EwS.js             [39m[1m[2m  3.34 kB[22m[1m[22m[2m │ gzip:   1.61 kB[22m
+[2mdist/[22m[36massets/UserProfile-CNRwBbD-.js                [39m[1m[2m  7.54 kB[22m[1m[22m[2m │ gzip:   1.75 kB[22m
+[2mdist/[22m[36massets/VideoChat-DVujMb0T.js                  [39m[1m[2m  9.22 kB[22m[1m[22m[2m │ gzip:   2.47 kB[22m
+[2mdist/[22m[36massets/browser-ponyfill-DZZ0boIy.js           [39m[1m[2m 10.26 kB[22m[1m[22m[2m │ gzip:   3.50 kB[22m
+[2mdist/[22m[36massets/ChatSessionsList-C5GxgI-f.js           [39m[1m[2m 10.84 kB[22m[1m[22m[2m │ gzip:   2.21 kB[22m
+[2mdist/[22m[36massets/Settings-CkVW4wMG.js                   [39m[1m[2m 13.60 kB[22m[1m[22m[2m │ gzip:   2.50 kB[22m
+[2mdist/[22m[36massets/UserPreferences-1YAMONPx.js            [39m[1m[2m 15.08 kB[22m[1m[22m[2m │ gzip:   2.19 kB[22m
+[2mdist/[22m[36massets/ApiKeyManager-CwWIRWaT.js              [39m[1m[2m 17.69 kB[22m[1m[22m[2m │ gzip:   3.62 kB[22m
+[2mdist/[22m[36massets/Settings-Ber6xDp-.js                   [39m[1m[2m 24.62 kB[22m[1m[22m[2m │ gzip:   3.33 kB[22m
+[2mdist/[22m[36massets/Dashboard-BxDBvdSF.js                  [39m[1m[2m 28.62 kB[22m[1m[22m[2m │ gzip:   3.39 kB[22m
+[2mdist/[22m[36massets/ChatService-BlgcSBWM.js                [39m[1m[2m 40.26 kB[22m[1m[22m[2m │ gzip:  11.77 kB[22m
+[2mdist/[22m[36massets/Chat-BNowbybh.js                       [39m[1m[2m 45.50 kB[22m[1m[22m[2m │ gzip:   7.78 kB[22m
+[2mdist/[22m[36massets/App-BENNpAYX.js                        [39m[1m[2m 48.67 kB[22m[1m[22m[2m │ gzip:   8.83 kB[22m
+[2mdist/[22m[36massets/StructuredOutputRenderer-D7nat9m3.js   [39m[1m[2m106.70 kB[22m[1m[22m[2m │ gzip:  13.36 kB[22m
+[2mdist/[22m[36massets/AnalyticsDashboard-Cmg5N8CG.js         [39m[1m[2m442.48 kB[22m[1m[22m[2m │ gzip: 116.77 kB[22m
+[2mdist/[22m[36massets/index-DEfZc5YS.js                      [39m[1m[2m641.45 kB[22m[1m[22m[2m │ gzip: 195.46 kB[22m
+[32m✓ built in 11.08s[39m

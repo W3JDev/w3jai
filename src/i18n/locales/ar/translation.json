@@ -1,0 +1,176 @@
+{
+  "app": {
+    "name": "مساعد W3J",
+    "tagline": "رفيقك الذكي المميز"
+  },
+  "auth": {
+    "signIn": "تسجيل الدخول",
+    "signUp": "إنشاء حساب",
+    "signOut": "تسجيل الخروج",
+    "email": "البريد الإلكتروني",
+    "password": "كلمة المرور",
+    "confirmPassword": "تأكيد كلمة المرور",
+    "forgotPassword": "نسيت كلمة المرور؟",
+    "resetPassword": "إعادة تعيين كلمة المرور",
+    "createAccount": "إنشاء حساب",
+    "alreadyHaveAccount": "لديك حساب بالفعل؟",
+    "dontHaveAccount": "ليس لديك حساب؟",
+    "fullName": "الاسم الكامل",
+    "passwordRequirements": "يجب أن تتكون كلمة المرور من 8 أحرف على الأقل",
+    "sendResetInstructions": "إرسال تعليمات إعادة التعيين",
+    "rememberPassword": "تتذكر كلمة المرور؟",
+    "backToSignIn": "العودة إلى تسجيل الدخول",
+    "registrationSuccess": "تم التسجيل بنجاح! يرجى التحقق من بريدك الإلكتروني لتأكيد حسابك."
+  },
+  "chat": {
+    "newChat": "محادثة جديدة",
+    "send": "إرسال",
+    "typeMessage": "اكتب رسالة...",
+    "attachFile": "إرفاق ملف",
+    "startVoice": "بدء الإدخال الصوتي",
+    "stopVoice": "إيقاف التسجيل",
+    "you": "أنت",
+    "assistant": "مساعد W3J",
+    "welcome": {
+      "title": "مرحبًا بك في مساعد W3J",
+      "subtitle": "اسألني أي شيء عن القائمة، احصل على توصيات، أو المساعدة في أي أسئلة أخرى."
+    },
+    "suggestions": {
+      "menu": "ما هي قائمة اليوم؟",
+      "vegetarian": "اقترح شيئًا نباتيًا",
+      "specials": "أخبرني عن الأطباق الخاصة",
+      "hours": "ما هي ساعات العمل؟"
+    },
+    "history": "سجل المحادثات",
+    "noHistory": "لا يوجد سجل محادثات بعد",
+    "startNewChat": "بدء محادثة جديدة",
+    "deleteChat": "حذف المحادثة",
+    "editTitle": "تعديل العنوان",
+    "saveTitle": "حفظ"
+  },
+  "settings": {
+    "title": "الإعدادات",
+    "apiSettings": "إعدادات API",
+    "provider": "مزود الذكاء الاصطناعي",
+    "model": "النموذج",
+    "systemPrompt": "توجيه النظام",
+    "apiKey": "مفتاح API",
+    "elevenlabsKey": "مفتاح API لـ ElevenLabs",
+    "braveApiKey": "مفتاح API لبحث Brave",
+    "mcpServerUrl": "عنوان URL لخادم MCP",
+    "advancedSettings": "إعدادات متقدمة",
+    "showAdvanced": "عرض الإعدادات المتقدمة",
+    "hideAdvanced": "إخفاء الإعدادات المتقدمة",
+    "webSearch": "البحث على الويب",
+    "enableWebSearch": "تمكين البحث على الويب",
+    "useMcpServer": "استخدام خادم MCP",
+    "saveSettings": "حفظ الإعدادات"
+  },
+  "profile": {
+    "title": "إعدادات الملف الشخصي",
+    "emailCannotChange": "لا يمكن تغيير البريد الإلكتروني",
+    "saveChanges": "حفظ التغييرات"
+  },
+  "preferences": {
+    "title": "تفضيلات المستخدم",
+    "theme": "السمة",
+    "themes": {
+      "dark": "داكن",
+      "light": "فاتح",
+      "system": "النظام"
+    },
+    "defaultProvider": "مزود الذكاء الاصطناعي الافتراضي",
+    "defaultModel": "النموذج الافتراضي",
+    "defaultSystemPrompt": "توجيه النظام الافتراضي",
+    "enableVoice": "تمكين الإدخال/الإخراج الصوتي",
+    "enableWebSearch": "تمكين البحث على الويب",
+    "savePreferences": "حفظ التفضيلات"
+  },
+  "apiKeys": {
+    "title": "مفاتيح API",
+    "securityNote": "يتم تشفير مفاتيح API الخاصة بك وتخزينها بشكل آمن. لن نشارك مفاتيحك مع أطراف ثالثة أبدًا.",
+    "showKey": "عرض مفتاح API",
+    "hideKey": "إخفاء مفتاح API",
+    "deleteKey": "حذف مفتاح API",
+    "save": "حفظ"
+  },
+  "accessibility": {
+    "title": "إعدادات إمكانية الوصول",
+    "highContrast": "تباين عالي",
+    "highContrastDesc": "زيادة التباين لتحسين الرؤية",
+    "largeText": "نص كبير",
+    "largeTextDesc": "زيادة حجم النص لتحسين القراءة",
+    "reducedMotion": "حركة مخفضة",
+    "reducedMotionDesc": "تقليل الرسوم المتحركة والانتقالات",
+    "screenReaderMode": "وضع قارئ الشاشة",
+    "screenReaderModeDesc": "تحسين لقراء الشاشة",
+    "resetToDefaults": "إعادة التعيين إلى الإعدادات الافتراضية",
+    "keyboardShortcuts": "اختصارات لوحة المفاتيح",
+    "toggleHighContrast": "تبديل التباين العالي",
+    "toggleLargeText": "تبديل النص الكبير",
+    "toggleReducedMotion": "تبديل الحركة المخفضة",
+    "toggleScreenReaderMode": "تبديل وضع قارئ الشاشة",
+    "skipToContent": "تخطي إلى المحتوى الرئيسي"
+  },
+  "analytics": {
+    "title": "لوحة التحليلات",
+    "timeRanges": {
+      "7days": "7 أيام",
+      "30days": "30 يوم",
+      "90days": "90 يوم"
+    },
+    "export": "تصدير",
+    "stats": {
+      "totalUsers": "إجمالي المستخدمين",
+      "totalSessions": "إجمالي الجلسات",
+      "totalMessages": "إجمالي الرسائل"
+    },
+    "charts": {
+      "messagesByDay": "الرسائل حسب اليوم",
+      "messagesByRole": "الرسائل حسب الدور",
+      "featureUsage": "استخدام الميزات",
+      "userRetention": "احتفاظ المستخدمين"
+    }
+  },
+  "menu": {
+    "categories": "الفئات",
+    "items": "العناصر",
+    "price": "السعر",
+    "description": "الوصف",
+    "ingredients": "المكونات",
+    "dietaryInfo": "معلومات غذائية",
+    "popular": "شائع",
+    "available": "متاح",
+    "unavailable": "غير متاح",
+    "recommendations": "التوصيات",
+    "pairings": "الاقتران الموصى به"
+  },
+  "errors": {
+    "general": "حدث خطأ. يرجى المحاولة مرة أخرى.",
+    "login": "بيانات تسجيل الدخول غير صالحة",
+    "registration": "فشل التسجيل",
+    "passwordMismatch": "كلمات المرور غير متطابقة",
+    "apiKey": "مفتاح API غير صالح",
+    "connection": "خطأ في الاتصال. يرجى التحقق من اتصال الإنترنت.",
+    "permission": "ليس لديك إذن لعرض هذا المحتوى"
+  },
+  "common": {
+    "loading": "جاري التحميل...",
+    "saving": "جاري الحفظ...",
+    "delete": "حذف",
+    "edit": "تعديل",
+    "cancel": "إلغاء",
+    "confirm": "تأكيد",
+    "yes": "نعم",
+    "no": "لا",
+    "success": "نجاح",
+    "error": "خطأ",
+    "warning": "تحذير",
+    "info": "معلومات",
+    "close": "إغلاق",
+    "back": "رجوع",
+    "next": "التالي",
+    "retry": "إعادة المحاولة",
+    "tryAgain": "حاول مرة أخرى"
+  }
+}

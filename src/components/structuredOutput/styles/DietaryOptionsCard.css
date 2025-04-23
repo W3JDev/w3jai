@@ -1,0 +1,229 @@
+/* DietaryOptionsCard.css */
+.dietary-options-card {
+  background: #fff;
+  border-radius: 12px;
+  box-shadow: 0 8px 20px rgba(0, 0, 0, 0.08);
+  overflow: hidden;
+  margin: 1.5rem 0;
+  padding: 1.5rem;
+  border: 1px solid #e2e8f0;
+}
+
+.dietary-header {
+  display: flex;
+  align-items: center;
+  margin-bottom: 1.5rem;
+  padding-bottom: 1rem;
+  border-bottom: 2px solid #f7fafc;
+}
+
+.dietary-icon {
+  font-size: 2.5rem;
+  margin-right: 1rem;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.dietary-titles {
+  flex: 1;
+}
+
+.dietary-title {
+  margin: 0 0 0.25rem;
+  font-size: 1.75rem;
+  font-weight: 700;
+  color: #2d3748;
+}
+
+.dietary-description {
+  margin: 0;
+  color: #718096;
+  font-size: 1rem;
+  line-height: 1.5;
+}
+
+.allergens-excluded {
+  background: #f7fafc;
+  padding: 1rem;
+  border-radius: 8px;
+  margin-bottom: 1.5rem;
+}
+
+.allergens-label {
+  font-weight: 600;
+  color: #4a5568;
+  margin-right: 0.5rem;
+}
+
+.allergens-tags {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.5rem;
+  margin-top: 0.5rem;
+}
+
+.allergen-tag {
+  background: #edf2f7;
+  color: #4a5568;
+  padding: 0.25rem 0.75rem;
+  border-radius: 9999px;
+  font-size: 0.8rem;
+  font-weight: 500;
+}
+
+.dietary-items {
+  display: flex;
+  flex-direction: column;
+  gap: 1.25rem;
+}
+
+.dietary-item {
+  display: flex;
+  padding: 1rem;
+  border-radius: 8px;
+  background: #f7fafc;
+  transition: all 0.2s ease;
+  cursor: pointer;
+  border: 1px solid transparent;
+}
+
+.dietary-item:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.05);
+  border-color: #e2e8f0;
+}
+
+.popular-item {
+  background: #ebf8ff;
+  border-color: #bee3f8;
+}
+
+.item-image-container {
+  width: 80px;
+  height: 80px;
+  border-radius: 8px;
+  overflow: hidden;
+  position: relative;
+  flex-shrink: 0;
+}
+
+.item-image {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+.popular-badge {
+  position: absolute;
+  top: 5px;
+  right: 5px;
+  background: #ed8936;
+  color: white;
+  font-size: 0.6rem;
+  padding: 2px 6px;
+  border-radius: 4px;
+  font-weight: bold;
+}
+
+.item-details {
+  margin-left: 1rem;
+  flex: 1;
+}
+
+.item-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-start;
+  margin-bottom: 0.5rem;
+}
+
+.item-name {
+  margin: 0;
+  font-size: 1.1rem;
+  font-weight: 600;
+  color: #2d3748;
+}
+
+.item-price {
+  font-weight: 700;
+  color: #2c7a7b;
+  white-space: nowrap;
+}
+
+.item-description {
+  margin: 0;
+  color: #718096;
+  font-size: 0.9rem;
+  line-height: 1.4;
+}
+
+.no-items-message {
+  padding: 2rem;
+  text-align: center;
+  background: #f7fafc;
+  border-radius: 8px;
+  color: #718096;
+  font-style: italic;
+}
+
+.dietary-actions {
+  display: flex;
+  justify-content: center;
+  gap: 1rem;
+  margin-top: 1.5rem;
+  padding-top: 1rem;
+  border-top: 2px solid #f7fafc;
+}
+
+.dietary-action-button {
+  padding: 0.75rem 1.5rem;
+  border-radius: 8px;
+  font-weight: 500;
+  cursor: pointer;
+  transition: all 0.2s ease;
+  border: none;
+}
+
+.dietary-action-button.primary {
+  background: #2c7a7b;
+  color: white;
+}
+
+.dietary-action-button.primary:hover {
+  background: #285e61;
+}
+
+.dietary-action-button.secondary {
+  background: #e2e8f0;
+  color: #4a5568;
+}
+
+.dietary-action-button.secondary:hover {
+  background: #cbd5e0;
+}
+
+/* Responsive adjustments */
+@media (max-width: 640px) {
+  .dietary-item {
+    flex-direction: column;
+  }
+  
+  .item-image-container {
+    width: 100%;
+    height: 120px;
+    margin-bottom: 0.75rem;
+  }
+  
+  .item-details {
+    margin-left: 0;
+  }
+  
+  .item-header {
+    flex-direction: column;
+  }
+  
+  .item-price {
+    margin-top: 0.25rem;
+  }
+}

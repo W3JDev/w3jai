@@ -1,0 +1,142 @@
+/* EventCard.css */
+.event-card {
+  display: flex;
+  background: #fff;
+  border-radius: 12px;
+  box-shadow: 0 8px 20px rgba(0, 0, 0, 0.08);
+  overflow: hidden;
+  margin: 1rem 0;
+  transition: transform 0.2s ease, box-shadow 0.2s ease;
+}
+
+.event-card:hover {
+  transform: translateY(-4px);
+  box-shadow: 0 12px 24px rgba(0, 0, 0, 0.12);
+}
+
+.event-image {
+  width: 200px;
+  height: auto;
+  flex-shrink: 0;
+}
+
+.event-image img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+.event-content {
+  padding: 1.5rem;
+  flex: 1;
+}
+
+.event-title {
+  margin: 0 0 0.75rem;
+  font-size: 1.5rem;
+  font-weight: 600;
+  color: #2d3748;
+}
+
+.event-datetime,
+.event-location {
+  display: flex;
+  align-items: center;
+  margin-bottom: 0.75rem;
+  color: #4a5568;
+  font-size: 1rem;
+}
+
+.datetime-icon,
+.location-icon {
+  margin-right: 0.5rem;
+  width: 20px;
+  text-align: center;
+}
+
+.event-description {
+  margin: 0 0 1rem;
+  color: #718096;
+  line-height: 1.5;
+}
+
+.event-details {
+  margin-bottom: 1rem;
+}
+
+.event-detail {
+  display: flex;
+  margin-bottom: 0.5rem;
+  font-size: 0.95rem;
+}
+
+.detail-label {
+  width: 100px;
+  font-weight: 500;
+  color: #4a5568;
+}
+
+.detail-value {
+  color: #718096;
+}
+
+.event-tags {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.5rem;
+  margin-bottom: 1.25rem;
+}
+
+.event-tag {
+  background: #e2e8f0;
+  color: #4a5568;
+  padding: 0.25rem 0.75rem;
+  border-radius: 9999px;
+  font-size: 0.8rem;
+  font-weight: 500;
+}
+
+.event-actions {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.5rem;
+}
+
+.event-action-button {
+  padding: 0.5rem 1rem;
+  border-radius: 6px;
+  font-weight: 500;
+  cursor: pointer;
+  transition: all 0.2s ease;
+  border: none;
+}
+
+.event-action-button.primary {
+  background: #4299e1;
+  color: white;
+}
+
+.event-action-button.primary:hover {
+  background: #3182ce;
+}
+
+.event-action-button.secondary {
+  background: #e2e8f0;
+  color: #4a5568;
+}
+
+.event-action-button.secondary:hover {
+  background: #cbd5e0;
+}
+
+/* Responsive adjustments */
+@media (max-width: 640px) {
+  .event-card {
+    flex-direction: column;
+  }
+  
+  .event-image {
+    width: 100%;
+    height: 200px;
+  }
+}
