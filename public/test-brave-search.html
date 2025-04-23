@@ -1,0 +1,173 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Brave Search API Test</title>
+  <style>
+    body {
+      font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+      max-width: 800px;
+      margin: 0 auto;
+      padding: 20px;
+      background-color: #f5f5f5;
+    }
+    h1 {
+      color: #333;
+    }
+    .form-group {
+      margin-bottom: 15px;
+    }
+    label {
+      display: block;
+      margin-bottom: 5px;
+      font-weight: bold;
+    }
+    input[type="text"], input[type="password"] {
+      width: 100%;
+      padding: 8px;
+      border: 1px solid #ddd;
+      border-radius: 4px;
+      font-size: 16px;
+    }
+    button {
+      background-color: #4CAF50;
+      color: white;
+      border: none;
+      padding: 10px 15px;
+      border-radius: 4px;
+      cursor: pointer;
+      font-size: 16px;
+    }
+    button:hover {
+      background-color: #45a049;
+    }
+    #results {
+      margin-top: 20px;
+      border: 1px solid #ddd;
+      padding: 15px;
+      border-radius: 4px;
+      background-color: white;
+      white-space: pre-wrap;
+    }
+    .result-item {
+      margin-bottom: 15px;
+      padding-bottom: 15px;
+      border-bottom: 1px solid #eee;
+    }
+    .result-title {
+      font-weight: bold;
+      color: #1a0dab;
+    }
+    .result-url {
+      color: #006621;
+      font-size: 14px;
+      margin: 5px 0;
+    }
+    .result-description {
+      color: #545454;
+      font-size: 14px;
+    }
+    .error {
+      color: red;
+      font-weight: bold;
+    }
+  </style>
+</head>
+<body>
+  <h1>Brave Search API Test</h1>
+
+  <div class="form-group">
+    <label for="api-key">Brave Search API Key:</label>
+    <input type="password" id="api-key" placeholder="Enter your Brave Search API key">
+  </div>
+
+  <div class="form-group">
+    <label for="query">Search Query:</label>
+    <input type="text" id="query" value="latest news">
+  </div>
+
+  <button id="search-button">Search</button>
+
+  <div id="results">
+    <p>Results will appear here...</p>
+  </div>
+
+  <script>
+    document.getElementById('search-button').addEventListener('click', async () => {
+      const apiKey = document.getElementById('api-key').value;
+      const query = document.getElementById('query').value;
+      const resultsDiv = document.getElementById('results');
+
+      if (!apiKey) {
+        resultsDiv.innerHTML = '<p class="error">Please enter a Brave Search API key</p>';
+        return;
+      }
+
+      resultsDiv.innerHTML = '<p>Searching...</p>';
+
+      try {
+        // Use a proxy endpoint to avoid CORS issues
+        const endpoint = '/api/brave-search';
+        const url = new URL(endpoint, window.location.origin);
+        url.searchParams.append('q', query);
+        url.searchParams.append('count', 5);
+
+        console.log('Using proxy endpoint:', url.toString());
+
+        console.log(`Testing Brave Search API with query: "${query}" and API key: ${apiKey.substring(0, 5)}...`);
+
+        const response = await fetch(url, {
+          method: 'GET',
+          headers: {
+            'Accept': 'application/json',
+            'X-Subscription-Token': apiKey
+          }
+        });
+
+        console.log('Response status:', response.status, response.statusText);
+
+        if (!response.ok) {
+          const errorText = await response.text();
+          console.error('Error response:', errorText);
+          throw new Error(`Brave Search API error: ${response.status} ${response.statusText}`);
+        }
+
+        console.log('Response received successfully');
+
+        const data = await response.json();
+
+        // Display results
+        const results = data.web?.results || [];
+
+        if (results.length === 0) {
+          resultsDiv.innerHTML = '<p>No results found</p>';
+          return;
+        }
+
+        let html = `<h2>Found ${results.length} results for "${query}"</h2>`;
+
+        results.forEach((item, index) => {
+          html += `
+            <div class="result-item">
+              <div class="result-title">${index + 1}. ${item.title}</div>
+              <div class="result-url">${item.url}</div>
+              <div class="result-description">${item.description}</div>
+            </div>
+          `;
+        });
+
+        // Add raw JSON for debugging
+        html += '<h3>Raw API Response:</h3>';
+        html += `<pre>${JSON.stringify(data, null, 2)}</pre>`;
+
+        resultsDiv.innerHTML = html;
+
+      } catch (error) {
+        resultsDiv.innerHTML = `<p class="error">Error: ${error.message}</p>`;
+        console.error('Brave Search API test failed:', error);
+      }
+    });
+  </script>
+</body>
+</html>

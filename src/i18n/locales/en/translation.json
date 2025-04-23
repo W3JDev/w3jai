@@ -1,0 +1,176 @@
+{
+  "app": {
+    "name": "W3J Assistant",
+    "tagline": "Your premium AI companion"
+  },
+  "auth": {
+    "signIn": "Sign In",
+    "signUp": "Sign Up",
+    "signOut": "Sign Out",
+    "email": "Email",
+    "password": "Password",
+    "confirmPassword": "Confirm Password",
+    "forgotPassword": "Forgot password?",
+    "resetPassword": "Reset Password",
+    "createAccount": "Create Account",
+    "alreadyHaveAccount": "Already have an account?",
+    "dontHaveAccount": "Don't have an account?",
+    "fullName": "Full Name",
+    "passwordRequirements": "Password must be at least 8 characters long",
+    "sendResetInstructions": "Send Reset Instructions",
+    "rememberPassword": "Remember your password?",
+    "backToSignIn": "Back to Sign In",
+    "registrationSuccess": "Registration successful! Please check your email to confirm your account."
+  },
+  "chat": {
+    "newChat": "New Chat",
+    "send": "Send",
+    "typeMessage": "Type a message...",
+    "attachFile": "Attach file",
+    "startVoice": "Start voice input",
+    "stopVoice": "Stop recording",
+    "you": "You",
+    "assistant": "W3J Assistant",
+    "welcome": {
+      "title": "Welcome to W3J Assistant",
+      "subtitle": "Ask me anything about the menu, get recommendations, or help with any other questions."
+    },
+    "suggestions": {
+      "menu": "What's on the menu today?",
+      "vegetarian": "Recommend something vegetarian",
+      "specials": "Tell me about your specials",
+      "hours": "What are your opening hours?"
+    },
+    "history": "Chat History",
+    "noHistory": "No chat history yet",
+    "startNewChat": "Start a new chat",
+    "deleteChat": "Delete chat",
+    "editTitle": "Edit title",
+    "saveTitle": "Save"
+  },
+  "settings": {
+    "title": "Settings",
+    "apiSettings": "API Settings",
+    "provider": "AI Provider",
+    "model": "Model",
+    "systemPrompt": "System Prompt",
+    "apiKey": "API Key",
+    "elevenlabsKey": "ElevenLabs API Key",
+    "braveApiKey": "Brave Search API Key",
+    "mcpServerUrl": "MCP Server URL",
+    "advancedSettings": "Advanced Settings",
+    "showAdvanced": "Show Advanced Settings",
+    "hideAdvanced": "Hide Advanced Settings",
+    "webSearch": "Web Search",
+    "enableWebSearch": "Enable web search",
+    "useMcpServer": "Use MCP Server",
+    "saveSettings": "Save Settings"
+  },
+  "profile": {
+    "title": "Profile Settings",
+    "emailCannotChange": "Email cannot be changed",
+    "saveChanges": "Save Changes"
+  },
+  "preferences": {
+    "title": "User Preferences",
+    "theme": "Theme",
+    "themes": {
+      "dark": "Dark",
+      "light": "Light",
+      "system": "System"
+    },
+    "defaultProvider": "Default AI Provider",
+    "defaultModel": "Default Model",
+    "defaultSystemPrompt": "Default System Prompt",
+    "enableVoice": "Enable voice input/output",
+    "enableWebSearch": "Enable web search",
+    "savePreferences": "Save Preferences"
+  },
+  "apiKeys": {
+    "title": "API Keys",
+    "securityNote": "Your API keys are encrypted and stored securely. We never share your keys with third parties.",
+    "showKey": "Show API Key",
+    "hideKey": "Hide API Key",
+    "deleteKey": "Delete API Key",
+    "save": "Save"
+  },
+  "accessibility": {
+    "title": "Accessibility Settings",
+    "highContrast": "High Contrast",
+    "highContrastDesc": "Increase contrast for better visibility",
+    "largeText": "Large Text",
+    "largeTextDesc": "Increase text size for better readability",
+    "reducedMotion": "Reduced Motion",
+    "reducedMotionDesc": "Minimize animations and transitions",
+    "screenReaderMode": "Screen Reader Mode",
+    "screenReaderModeDesc": "Optimize for screen readers",
+    "resetToDefaults": "Reset to Defaults",
+    "keyboardShortcuts": "Keyboard Shortcuts",
+    "toggleHighContrast": "Toggle high contrast",
+    "toggleLargeText": "Toggle large text",
+    "toggleReducedMotion": "Toggle reduced motion",
+    "toggleScreenReaderMode": "Toggle screen reader mode",
+    "skipToContent": "Skip to main content"
+  },
+  "analytics": {
+    "title": "Analytics Dashboard",
+    "timeRanges": {
+      "7days": "7 Days",
+      "30days": "30 Days",
+      "90days": "90 Days"
+    },
+    "export": "Export",
+    "stats": {
+      "totalUsers": "Total Users",
+      "totalSessions": "Total Sessions",
+      "totalMessages": "Total Messages"
+    },
+    "charts": {
+      "messagesByDay": "Messages by Day",
+      "messagesByRole": "Messages by Role",
+      "featureUsage": "Feature Usage",
+      "userRetention": "User Retention"
+    }
+  },
+  "menu": {
+    "categories": "Categories",
+    "items": "Items",
+    "price": "Price",
+    "description": "Description",
+    "ingredients": "Ingredients",
+    "dietaryInfo": "Dietary Information",
+    "popular": "Popular",
+    "available": "Available",
+    "unavailable": "Unavailable",
+    "recommendations": "Recommendations",
+    "pairings": "Recommended Pairings"
+  },
+  "errors": {
+    "general": "An error occurred. Please try again.",
+    "login": "Invalid login credentials",
+    "registration": "Registration failed",
+    "passwordMismatch": "Passwords do not match",
+    "apiKey": "Invalid API key",
+    "connection": "Connection error. Please check your internet connection.",
+    "permission": "You do not have permission to view this content"
+  },
+  "common": {
+    "loading": "Loading...",
+    "saving": "Saving...",
+    "delete": "Delete",
+    "edit": "Edit",
+    "cancel": "Cancel",
+    "confirm": "Confirm",
+    "yes": "Yes",
+    "no": "No",
+    "success": "Success",
+    "error": "Error",
+    "warning": "Warning",
+    "info": "Information",
+    "close": "Close",
+    "back": "Back",
+    "next": "Next",
+    "retry": "Retry",
+    "tryAgain": "Try Again"
+  }
+}

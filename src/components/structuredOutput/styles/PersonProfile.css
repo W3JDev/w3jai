@@ -1,0 +1,167 @@
+/* PersonProfile.css */
+.person-profile {
+  background: #fff;
+  border-radius: 12px;
+  box-shadow: 0 8px 20px rgba(0, 0, 0, 0.08);
+  padding: 1.5rem;
+  margin: 1rem 0;
+  transition: transform 0.2s ease, box-shadow 0.2s ease;
+}
+
+.person-profile:hover {
+  transform: translateY(-4px);
+  box-shadow: 0 12px 24px rgba(0, 0, 0, 0.12);
+}
+
+.profile-header {
+  display: flex;
+  align-items: center;
+  margin-bottom: 1.25rem;
+}
+
+.profile-image {
+  width: 80px;
+  height: 80px;
+  border-radius: 50%;
+  overflow: hidden;
+  margin-right: 1rem;
+  flex-shrink: 0;
+}
+
+.profile-image img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+.profile-title-section {
+  flex: 1;
+}
+
+.profile-name {
+  margin: 0 0 0.25rem;
+  font-size: 1.5rem;
+  font-weight: 600;
+  color: #2d3748;
+}
+
+.profile-title {
+  color: #718096;
+  font-size: 1.1rem;
+}
+
+.profile-bio {
+  margin-bottom: 1.25rem;
+  color: #4a5568;
+  line-height: 1.6;
+}
+
+.profile-details {
+  margin-bottom: 1.25rem;
+}
+
+.profile-detail-item {
+  display: flex;
+  margin-bottom: 0.5rem;
+  font-size: 0.95rem;
+}
+
+.detail-label {
+  width: 100px;
+  font-weight: 500;
+  color: #4a5568;
+}
+
+.detail-value {
+  color: #718096;
+  flex: 1;
+}
+
+.profile-social {
+  display: flex;
+  gap: 0.75rem;
+  margin-bottom: 1.25rem;
+}
+
+.social-link {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 36px;
+  height: 36px;
+  border-radius: 50%;
+  background: #f7fafc;
+  color: #4a5568;
+  text-decoration: none;
+  transition: all 0.2s ease;
+}
+
+.social-link:hover {
+  background: #e2e8f0;
+  transform: translateY(-2px);
+}
+
+.social-icon {
+  font-size: 1.25rem;
+}
+
+.social-platform {
+  font-size: 0.8rem;
+  font-weight: 500;
+}
+
+.profile-actions {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.5rem;
+}
+
+.profile-action-button {
+  padding: 0.5rem 1rem;
+  border-radius: 6px;
+  font-weight: 500;
+  cursor: pointer;
+  transition: all 0.2s ease;
+  border: none;
+}
+
+.profile-action-button.primary {
+  background: #4299e1;
+  color: white;
+}
+
+.profile-action-button.primary:hover {
+  background: #3182ce;
+}
+
+.profile-action-button.secondary {
+  background: #e2e8f0;
+  color: #4a5568;
+}
+
+.profile-action-button.secondary:hover {
+  background: #cbd5e0;
+}
+
+/* Responsive adjustments */
+@media (max-width: 480px) {
+  .profile-header {
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+  }
+  
+  .profile-image {
+    margin-right: 0;
+    margin-bottom: 1rem;
+  }
+  
+  .profile-detail-item {
+    flex-direction: column;
+  }
+  
+  .detail-label {
+    width: 100%;
+    margin-bottom: 0.25rem;
+  }
+}

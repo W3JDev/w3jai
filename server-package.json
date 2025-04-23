@@ -1,0 +1,15 @@
+{
+  "name": "brave-search-proxy-server",
+  "version": "1.0.0",
+  "description": "Proxy server for Brave Search API",
+  "main": "server.js",
+  "type": "commonjs",
+  "scripts": {
+    "start": "node server.js"
+  },
+  "dependencies": {
+    "express": "^4.18.2",
+    "cors": "^2.8.5",
+    "axios": "^1.6.7"
+  }
+}

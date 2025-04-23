@@ -1,0 +1,176 @@
+{
+  "app": {
+    "name": "W3J Assistent",
+    "tagline": "Ihr Premium-KI-Begleiter"
+  },
+  "auth": {
+    "signIn": "Anmelden",
+    "signUp": "Registrieren",
+    "signOut": "Abmelden",
+    "email": "E-Mail",
+    "password": "Passwort",
+    "confirmPassword": "Passwort bestätigen",
+    "forgotPassword": "Passwort vergessen?",
+    "resetPassword": "Passwort zurücksetzen",
+    "createAccount": "Konto erstellen",
+    "alreadyHaveAccount": "Haben Sie bereits ein Konto?",
+    "dontHaveAccount": "Haben Sie kein Konto?",
+    "fullName": "Vollständiger Name",
+    "passwordRequirements": "Das Passwort muss mindestens 8 Zeichen lang sein",
+    "sendResetInstructions": "Anweisungen zum Zurücksetzen senden",
+    "rememberPassword": "Erinnern Sie sich an Ihr Passwort?",
+    "backToSignIn": "Zurück zur Anmeldung",
+    "registrationSuccess": "Registrierung erfolgreich! Bitte überprüfen Sie Ihre E-Mail, um Ihr Konto zu bestätigen."
+  },
+  "chat": {
+    "newChat": "Neuer Chat",
+    "send": "Senden",
+    "typeMessage": "Nachricht eingeben...",
+    "attachFile": "Datei anhängen",
+    "startVoice": "Spracheingabe starten",
+    "stopVoice": "Aufnahme stoppen",
+    "you": "Sie",
+    "assistant": "W3J Assistent",
+    "welcome": {
+      "title": "Willkommen beim W3J Assistenten",
+      "subtitle": "Fragen Sie mich alles über das Menü, erhalten Sie Empfehlungen oder Hilfe bei anderen Fragen."
+    },
+    "suggestions": {
+      "menu": "Was steht heute auf der Speisekarte?",
+      "vegetarian": "Empfehlen Sie etwas Vegetarisches",
+      "specials": "Erzählen Sie mir von Ihren Spezialitäten",
+      "hours": "Was sind Ihre Öffnungszeiten?"
+    },
+    "history": "Chat-Verlauf",
+    "noHistory": "Noch kein Chat-Verlauf",
+    "startNewChat": "Neuen Chat starten",
+    "deleteChat": "Chat löschen",
+    "editTitle": "Titel bearbeiten",
+    "saveTitle": "Speichern"
+  },
+  "settings": {
+    "title": "Einstellungen",
+    "apiSettings": "API-Einstellungen",
+    "provider": "KI-Anbieter",
+    "model": "Modell",
+    "systemPrompt": "System-Prompt",
+    "apiKey": "API-Schlüssel",
+    "elevenlabsKey": "ElevenLabs API-Schlüssel",
+    "braveApiKey": "Brave Search API-Schlüssel",
+    "mcpServerUrl": "MCP-Server-URL",
+    "advancedSettings": "Erweiterte Einstellungen",
+    "showAdvanced": "Erweiterte Einstellungen anzeigen",
+    "hideAdvanced": "Erweiterte Einstellungen ausblenden",
+    "webSearch": "Websuche",
+    "enableWebSearch": "Websuche aktivieren",
+    "useMcpServer": "MCP-Server verwenden",
+    "saveSettings": "Einstellungen speichern"
+  },
+  "profile": {
+    "title": "Profileinstellungen",
+    "emailCannotChange": "E-Mail kann nicht geändert werden",
+    "saveChanges": "Änderungen speichern"
+  },
+  "preferences": {
+    "title": "Benutzereinstellungen",
+    "theme": "Thema",
+    "themes": {
+      "dark": "Dunkel",
+      "light": "Hell",
+      "system": "System"
+    },
+    "defaultProvider": "Standard-KI-Anbieter",
+    "defaultModel": "Standardmodell",
+    "defaultSystemPrompt": "Standard-System-Prompt",
+    "enableVoice": "Spracheingabe/-ausgabe aktivieren",
+    "enableWebSearch": "Websuche aktivieren",
+    "savePreferences": "Einstellungen speichern"
+  },
+  "apiKeys": {
+    "title": "API-Schlüssel",
+    "securityNote": "Ihre API-Schlüssel werden verschlüsselt und sicher gespeichert. Wir geben Ihre Schlüssel niemals an Dritte weiter.",
+    "showKey": "API-Schlüssel anzeigen",
+    "hideKey": "API-Schlüssel ausblenden",
+    "deleteKey": "API-Schlüssel löschen",
+    "save": "Speichern"
+  },
+  "accessibility": {
+    "title": "Barrierefreiheit-Einstellungen",
+    "highContrast": "Hoher Kontrast",
+    "highContrastDesc": "Kontrast für bessere Sichtbarkeit erhöhen",
+    "largeText": "Großer Text",
+    "largeTextDesc": "Textgröße für bessere Lesbarkeit erhöhen",
+    "reducedMotion": "Reduzierte Bewegung",
+    "reducedMotionDesc": "Animationen und Übergänge minimieren",
+    "screenReaderMode": "Screenreader-Modus",
+    "screenReaderModeDesc": "Für Screenreader optimieren",
+    "resetToDefaults": "Auf Standardwerte zurücksetzen",
+    "keyboardShortcuts": "Tastaturkürzel",
+    "toggleHighContrast": "Hohen Kontrast umschalten",
+    "toggleLargeText": "Großen Text umschalten",
+    "toggleReducedMotion": "Reduzierte Bewegung umschalten",
+    "toggleScreenReaderMode": "Screenreader-Modus umschalten",
+    "skipToContent": "Zum Hauptinhalt springen"
+  },
+  "analytics": {
+    "title": "Analyse-Dashboard",
+    "timeRanges": {
+      "7days": "7 Tage",
+      "30days": "30 Tage",
+      "90days": "90 Tage"
+    },
+    "export": "Exportieren",
+    "stats": {
+      "totalUsers": "Gesamtbenutzer",
+      "totalSessions": "Gesamtsitzungen",
+      "totalMessages": "Gesamtnachrichten"
+    },
+    "charts": {
+      "messagesByDay": "Nachrichten pro Tag",
+      "messagesByRole": "Nachrichten nach Rolle",
+      "featureUsage": "Funktionsnutzung",
+      "userRetention": "Benutzerbindung"
+    }
+  },
+  "menu": {
+    "categories": "Kategorien",
+    "items": "Artikel",
+    "price": "Preis",
+    "description": "Beschreibung",
+    "ingredients": "Zutaten",
+    "dietaryInfo": "Ernährungsinformationen",
+    "popular": "Beliebt",
+    "available": "Verfügbar",
+    "unavailable": "Nicht verfügbar",
+    "recommendations": "Empfehlungen",
+    "pairings": "Empfohlene Kombinationen"
+  },
+  "errors": {
+    "general": "Ein Fehler ist aufgetreten. Bitte versuchen Sie es erneut.",
+    "login": "Ungültige Anmeldedaten",
+    "registration": "Registrierung fehlgeschlagen",
+    "passwordMismatch": "Passwörter stimmen nicht überein",
+    "apiKey": "Ungültiger API-Schlüssel",
+    "connection": "Verbindungsfehler. Bitte überprüfen Sie Ihre Internetverbindung.",
+    "permission": "Sie haben keine Berechtigung, diesen Inhalt anzuzeigen"
+  },
+  "common": {
+    "loading": "Wird geladen...",
+    "saving": "Wird gespeichert...",
+    "delete": "Löschen",
+    "edit": "Bearbeiten",
+    "cancel": "Abbrechen",
+    "confirm": "Bestätigen",
+    "yes": "Ja",
+    "no": "Nein",
+    "success": "Erfolg",
+    "error": "Fehler",
+    "warning": "Warnung",
+    "info": "Information",
+    "close": "Schließen",
+    "back": "Zurück",
+    "next": "Weiter",
+    "retry": "Wiederholen",
+    "tryAgain": "Erneut versuchen"
+  }
+}
