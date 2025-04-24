@@ -90,20 +90,23 @@ class GroqService extends AIService {
         messages[1].content += `\n\n[Image attached: The user has shared an image with you. Please respond accordingly.]`;
       }
 
-      const response = await fetch('https://api.groq.com/openai/v1/chat/completions', {
-        method: 'POST',
-        headers: {
-          'Authorization': `Bearer ${this.apiKey}`,
-          'Content-Type': 'application/json'
-        },
-        body: JSON.stringify({
-          model: this.selectedModel,
-          messages,
-          stream: true,
-          temperature: 0.7,
-          max_tokens: 1000
-        })
-      });
+      const response = await this.executeWithRetry(
+        () => fetch('https://api.groq.com/openai/v1/chat/completions', {
+          method: 'POST',
+          headers: {
+            'Authorization': `Bearer ${this.apiKey}`,
+            'Content-Type': 'application/json'
+          },
+          body: JSON.stringify({
+            model: this.selectedModel,
+            messages,
+            stream: true,
+            temperature: 0.7,
+            max_tokens: 1000
+          })
+        }),
+        'GROQ API request'
+      );
 
       if (!response.ok) {
         throw new Error(`GROQ API error: ${response.statusText}`);

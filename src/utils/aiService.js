@@ -6,6 +6,8 @@ class AIService {
     if (this.constructor === AIService) {
       throw new Error("Abstract class 'AIService' cannot be instantiated directly");
     }
+    this.maxRetries = 3;
+    this.retryDelay = 1000; // 1 second
   }
 
   /**
@@ -24,6 +26,29 @@ class AIService {
    */
   async sendMessage(text, options = {}) {
     throw new Error("Method 'sendMessage' must be implemented by subclasses");
+  }
+
+  /**
+   * Execute a request with retry logic
+   * @param {Function} requestFn - The request function to execute
+   * @param {string} errorContext - Context for error messages
+   * @returns {Promise<any>} - The response from the request
+   */
+  async executeWithRetry(requestFn, errorContext) {
+    let lastError;
+    
+    for (let attempt = 1; attempt <= this.maxRetries; attempt++) {
+      try {
+        return await requestFn();
+      } catch (error) {
+        lastError = error;
+        if (attempt < this.maxRetries) {
+          await new Promise(resolve => setTimeout(resolve, this.retryDelay * attempt));
+        }
+      }
+    }
+    
+    throw new Error(`${errorContext} failed after ${this.maxRetries} attempts: ${lastError?.message || lastError}`);
   }
 
   /**

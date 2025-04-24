@@ -4,6 +4,7 @@ import { useNavigate } from 'react-router-dom';
 import { Save, ArrowLeft, Eye, EyeOff } from 'lucide-react';
 import { useTranslation } from 'react-i18next';
 import userService from '../services/userService';
+import ApiManager from '../services/ApiManager';
 
 const Settings = () => {
   const { user, preferences, updateUserPreferences } = useAuth();
@@ -14,13 +15,8 @@ const Settings = () => {
     defaultProvider: 'openai',
     defaultModel: 'gpt-4o',
     defaultSystemPrompt: '',
-    apiKeys: {
-      openai: '',
-      groq: '',
-      anthropic: '',
-      elevenlabs: '',
-      brave: ''
-    },
+    apiKey: import.meta.env.VITE_OPENAI_API_KEY || '',
+    providerType: 'openai',
     webSearch: {
       enabled: false,
       useMcpServer: false,
@@ -28,13 +24,10 @@ const Settings = () => {
     }
   });
 
-  const [showApiKeys, setShowApiKeys] = useState({
-    openai: false,
-    groq: false,
-    anthropic: false,
-    elevenlabs: false,
-    brave: false
-  });
+  const [elevenLabsKey, setElevenLabsKey] = useState(import.meta.env.VITE_ELEVENLABS_API_KEY || '');
+
+  const [showApiKey, setShowApiKey] = useState(false);
+const [availableModels, setAvailableModels] = useState([]);
 
   const [saving, setSaving] = useState(false);
   const [error, setError] = useState(null);
@@ -171,7 +164,28 @@ const Settings = () => {
                 <option value="openai">OpenAI</option>
                 <option value="groq">GROQ</option>
                 <option value="anthropic">Anthropic</option>
+                <option value="deepseek">Deepseek</option>
               </select>
+            </div>
+            
+            <div className="space-y-4 mb-6 p-4 bg-gray-700/30 rounded-lg border border-gray-600/50">
+              <h3 className="text-lg font-medium">Voice Settings</h3>
+              <div>
+                <label className="block text-sm font-medium mb-2" htmlFor="elevenLabsKey">
+                  ElevenLabs API Key
+                </label>
+                <input
+                  type="password"
+                  id="elevenLabsKey"
+                  name="elevenLabsKey"
+                  value={elevenLabsKey}
+                  onChange={(e) => setElevenLabsKey(e.target.value)}
+                  placeholder={import.meta.env.VITE_ELEVENLABS_API_KEY ? 'Using environment key' : 'Enter ElevenLabs API Key'}
+                  className="w-full p-3 bg-gray-700 border border-gray-600 rounded-lg text-white focus:outline-none focus:ring-2 focus:ring-blue-500"
+                  disabled={!!import.meta.env.VITE_ELEVENLABS_API_KEY}
+                  autoComplete="new-password"
+                />
+              </div>
             </div>
 
             <div>
@@ -184,6 +198,7 @@ const Settings = () => {
                 value={formData.defaultModel}
                 onChange={handleChange}
                 className="w-full p-3 bg-gray-700 border border-gray-600 rounded-lg text-white focus:outline-none focus:ring-2 focus:ring-blue-500"
+                aria-label="Default AI model selection"
               >
                 {formData.defaultProvider === 'openai' && (
                   <>
@@ -206,6 +221,12 @@ const Settings = () => {
                     <option value="claude-3-haiku-20240307">Claude 3 Haiku</option>
                   </>
                 )}
+                {formData.defaultProvider === 'deepseek' && (
+                  <option value="deepseek-coder">Deepseek Coder</option>
+                )}
+                {formData.defaultProvider === 'huggingface' && (
+                  <option value="mixtral-8x7b">Mixtral 8x7B</option>
+                )}
               </select>
             </div>
 
@@ -225,106 +246,70 @@ const Settings = () => {
             </div>
 
             <div className="space-y-4">
+              <div>
+                <label className="block text-sm font-medium mb-2" htmlFor="providerType">
+                  {t('settings.providerType')}
+                </label>
+                <select
+                  id="providerType"
+                  name="providerType"
+                  value={formData.providerType}
+                  onChange={handleChange}
+                  className="w-full p-3 bg-gray-700 border border-gray-600 rounded-lg text-white focus:outline-none focus:ring-2 focus:ring-blue-500"
+                >
+                  <option value="openai">OpenAI</option>
+                  <option value="anthropic">Anthropic</option>
+                  <option value="groq">GROQ</option>
+                  <option value="elevenlabs">ElevenLabs</option>
+                  <option value="brave">Brave</option>
+                </select>
+              </div>
+
               <div className="relative">
-                <label className="block text-sm font-medium mb-2" htmlFor="apiKeys.openai">
-                  OpenAI {t('settings.apiKey')}
+                <label className="block text-sm font-medium mb-2" htmlFor="apiKey">
+                  {t('settings.apiKey')}
                 </label>
                 <div className="flex">
                   <input
-                    id="apiKeys.openai"
-                    name="apiKeys.openai"
-                    type={showApiKeys.openai ? 'text' : 'password'}
-                    value={formData.apiKeys.openai}
+                    id="apiKey"
+                    name="apiKey"
+                    type={showApiKey ? 'text' : 'password'}
+                    value={formData.apiKey}
                     onChange={handleChange}
-                    placeholder="sk-..."
+                    placeholder="Enter API key"
                     className="flex-1 p-3 bg-gray-700 border border-gray-600 rounded-l-lg text-white focus:outline-none focus:ring-2 focus:ring-blue-500"
                   />
                   <button
                     type="button"
-                    onClick={() => toggleShowApiKey('openai')}
+                    onClick={() => setShowApiKey(!showApiKey)}
                     className="p-3 bg-gray-700 border border-gray-600 border-l-0 rounded-r-lg text-gray-400 hover:text-white"
                   >
-                    {showApiKeys.openai ? <EyeOff size={20} /> : <Eye size={20} />}
+                    {showApiKey ? <EyeOff size={20} /> : <Eye size={20} />}
                   </button>
                 </div>
               </div>
 
-              <div className="relative">
-                <label className="block text-sm font-medium mb-2" htmlFor="apiKeys.groq">
-                  GROQ {t('settings.apiKey')}
+              <div>
+                <label className="block text-sm font-medium mb-2" htmlFor="defaultModel">
+                  {t('settings.model')}
                 </label>
-                <div className="flex">
-                  <input
-                    id="apiKeys.groq"
-                    name="apiKeys.groq"
-                    type={showApiKeys.groq ? 'text' : 'password'}
-                    value={formData.apiKeys.groq}
-                    onChange={handleChange}
-                    placeholder="gsk_..."
-                    className="flex-1 p-3 bg-gray-700 border border-gray-600 rounded-l-lg text-white focus:outline-none focus:ring-2 focus:ring-blue-500"
-                  />
-                  <button
-                    type="button"
-                    onClick={() => toggleShowApiKey('groq')}
-                    className="p-3 bg-gray-700 border border-gray-600 border-l-0 rounded-r-lg text-gray-400 hover:text-white"
-                  >
-                    {showApiKeys.groq ? <EyeOff size={20} /> : <Eye size={20} />}
-                  </button>
-                </div>
+                <select
+                  id="defaultModel"
+                  name="defaultModel"
+                  value={formData.defaultModel}
+                  onChange={handleChange}
+                  className="w-full p-3 bg-gray-700 border border-gray-600 rounded-lg text-white focus:outline-none focus:ring-2 focus:ring-blue-500"
+                >
+                  {availableModels.map(model => (
+                    <option key={model.id} value={model.id}>{model.name}</option>
+                  ))}
+                </select>
               </div>
-
-              <div className="relative">
-                <label className="block text-sm font-medium mb-2" htmlFor="apiKeys.anthropic">
-                  Anthropic {t('settings.apiKey')}
-                </label>
-                <div className="flex">
-                  <input
-                    id="apiKeys.anthropic"
-                    name="apiKeys.anthropic"
-                    type={showApiKeys.anthropic ? 'text' : 'password'}
-                    value={formData.apiKeys.anthropic}
-                    onChange={handleChange}
-                    placeholder="sk-ant-..."
-                    className="flex-1 p-3 bg-gray-700 border border-gray-600 rounded-l-lg text-white focus:outline-none focus:ring-2 focus:ring-blue-500"
-                  />
-                  <button
-                    type="button"
-                    onClick={() => toggleShowApiKey('anthropic')}
-                    className="p-3 bg-gray-700 border border-gray-600 border-l-0 rounded-r-lg text-gray-400 hover:text-white"
-                  >
-                    {showApiKeys.anthropic ? <EyeOff size={20} /> : <Eye size={20} />}
-                  </button>
-                </div>
-              </div>
-
-              <div className="relative">
-                <label className="block text-sm font-medium mb-2" htmlFor="apiKeys.elevenlabs">
-                  {t('settings.elevenlabsKey')}
-                </label>
-                <div className="flex">
-                  <input
-                    id="apiKeys.elevenlabs"
-                    name="apiKeys.elevenlabs"
-                    type={showApiKeys.elevenlabs ? 'text' : 'password'}
-                    value={formData.apiKeys.elevenlabs}
-                    onChange={handleChange}
-                    placeholder="..."
-                    className="flex-1 p-3 bg-gray-700 border border-gray-600 rounded-l-lg text-white focus:outline-none focus:ring-2 focus:ring-blue-500"
-                  />
-                  <button
-                    type="button"
-                    onClick={() => toggleShowApiKey('elevenlabs')}
-                    className="p-3 bg-gray-700 border border-gray-600 border-l-0 rounded-r-lg text-gray-400 hover:text-white"
-                  >
-                    {showApiKeys.elevenlabs ? <EyeOff size={20} /> : <Eye size={20} />}
-                  </button>
-                </div>
-              </div>
-            </div>
           </div>
         </div>
+      </div>
 
-        <div className="bg-gray-800 rounded-lg p-6 shadow-lg">
+      <div className="bg-gray-800 rounded-lg p-6 shadow-lg">
           <div className="flex justify-between items-center mb-4">
             <h2 className="text-xl font-semibold">{t('settings.webSearch')}</h2>
             <button
@@ -430,5 +415,4 @@ const Settings = () => {
     </div>
   );
 };
-
-export default Settings;
+export default Settings
